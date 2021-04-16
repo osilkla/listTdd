@@ -1,9 +1,9 @@
  
 function ListItem({item}) {
   return (
-    <div>
+    <li>
       {item}
-    </div>
+    </li>
   );
 }
 

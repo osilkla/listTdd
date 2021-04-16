@@ -6,14 +6,13 @@ function List({items}) {
     return <div>No items provide</div>
   }
   return (
-    <div>
+    <ul>
       {
         items.map((value)=>{
-          <ListItem item={value}/>
+          return <ListItem item={value}key={value}/>
         })
       }
-      
-    </div>
+    </ul>
   );
 }
 
