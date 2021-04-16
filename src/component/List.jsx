@@ -1,8 +1,18 @@
+import ListItem from "./ListItem";
+
  
-function List() {
+function List({items}) {
+  if(!items){
+    return <div>No items provide</div>
+  }
   return (
     <div>
-      list
+      {
+        items.map((value)=>{
+          <ListItem item={value}/>
+        })
+      }
+      
     </div>
   );
 }
