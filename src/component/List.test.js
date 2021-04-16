@@ -12,5 +12,19 @@ test('render items if items provide', () => {
   const renderedItem = screen.getAllByRole("listitem")
    expect(renderedItem.length).toEqual(items.length);
 });
+test('render items should be sort asc', () => {
+  let items =[5,1,2,3]
+  render(<List items={items}/>);
+  const renderedItem = screen.getAllByRole("listitem")
+   expect(renderedItem.map((item)=>item.textContent)).toMatchInlineSnapshot(`
+   Array [
+     "1",
+     "2",
+     "3",
+     "5",
+   ]
+   `);
+});
+
 
 
